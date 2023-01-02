@@ -6,8 +6,15 @@ from dotenv import load_dotenv
 #initialization Code
 #imports the Token from the TOKEN.env file (not included in the GitHub Repository)
 load_dotenv()
-client = discord.Bot()
 token = os.getenv('TOKEN')
+
+#Intializes the Intents function and disables discord features such as "<user> is typing" for performance
+intents = discord.Intents.default()
+intents.typing = False
+intents.presences = False
+
+client = discord.Client(intents=intents)
+
 
 @client.event
 async def on_ready():
