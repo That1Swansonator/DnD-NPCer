@@ -10,10 +10,10 @@ import random as rand
 def read_table():
 	print("Module Active")
 
-#Wild Magic Surge Table
+#Wilderness Combat Encounter Table
 def wild_combat():
 	d20 = rand.randint(0,19)
 	tab = pd.read_excel("wilderness_combat.xlsx") #Wilderness encounter table from excel to DataFrame
 	print(tab)
 
-wild_combat()
+wild_combat() #Testing to see if this function works as intended
