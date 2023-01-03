@@ -1,0 +1,19 @@
+#read_table.py implements a pandas dataframe that reads a selected d100 or d20 table from an excel file or sql database
+#Should work universally, regardless of implementation.
+#intialization
+import discord
+import numpy as np
+import pandas as pd
+import random as rand
+
+#Constuctor def
+def read_table():
+	print("Module Active")
+
+#Wild Magic Surge Table
+def wild_combat():
+	d20 = rand.randint(0,19)
+	tab = pd.read_excel("wilderness_combat.xlsx") #Wilderness encounter table from excel to DataFrame
+	print(tab)
+
+wild_combat()

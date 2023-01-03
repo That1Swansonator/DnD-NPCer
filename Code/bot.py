@@ -1,6 +1,7 @@
 import discord
 import os
 import random as rand
+import read_table as tab
 from dotenv import load_dotenv
 
 #initialization Code
@@ -12,6 +13,8 @@ token = os.getenv('TOKEN')
 intents = discord.Intents.default()
 intents.typing = False
 intents.presences = False
+intents.messages = True
+intents.guilds = True
 
 client = discord.Client(intents=intents)
 
@@ -45,3 +48,5 @@ async def on_message(message):
 			jokes = [" Can someone please shed more light on how my lamp got stolen?", 
 					 "Why is she called llene? She stands on equal legs.","What do you call a gazelle in a lions territory? Denzel."]
 			await message.channel.send(rand.choices(jokes))
+
+client.run(token)
