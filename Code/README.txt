@@ -1,1 +1,0 @@
-The token.env is for the token discord gives you for a bot. THIS MUST BE PRIVATE AND CANNOT BE SHARED.
