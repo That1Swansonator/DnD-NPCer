@@ -13,7 +13,8 @@ def read_table():
 #Wilderness Combat Encounter Table
 def wild_combat():
 	d20 = rand.randint(0,19)
+	print(str(d20))
 	tab = pd.read_csv("wilderness_combat.csv") #Wilderness encounter table from excel to DataFrame
-	print(tab)
+	print(tab.iloc[[d20]])
 
 wild_combat() #Testing to see if this function works as intended
