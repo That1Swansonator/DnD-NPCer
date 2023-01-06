@@ -13,7 +13,7 @@ def read_table():
 #Wilderness Combat Encounter Table
 def wild_combat():
 	d20 = rand.randint(0,19)
-	tab = pd.read_excel("wilderness_combat.xlsx") #Wilderness encounter table from excel to DataFrame
+	tab = pd.read_csv("wilderness_combat.csv") #Wilderness encounter table from excel to DataFrame
 	print(tab)
 
 wild_combat() #Testing to see if this function works as intended
