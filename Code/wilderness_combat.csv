@@ -1,21 +1,21 @@
-Index,Encounter,Quantity
-0,Nothing,
-1,Wolf,1
-2,Nothing,
-3,Brown Bear,1
-4,Nothing,
-5,Giant Bear,1
-6,Nothing,
-7,Kobolds,1d4
-8,Nothing,
-9,Goblin,1
-10,Nothing,
-11,Orc,1
-12,Nothing,
-13,Bandit,1
-14,Nothing,
-15,Goblins,1d8
-16,Nothing,
-17,Bandits,1d6
-18,Nothing,
-19,Owlbear,1
+Encounter,Quantity
+Nothing,0
+Wolf,1
+Nothing,0
+Brown Bear,1
+Nothing,0
+Giant Bear,1
+Nothing,0
+Kobolds,1d4
+Nothing,0
+Goblin,1
+Nothing,0
+Orc,1
+Nothing,0
+Bandit,1
+Nothing,0
+Goblins,1d8
+Nothing,0
+Bandits,1d6
+Nothing,0
+Owlbear,1
