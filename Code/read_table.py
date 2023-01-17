@@ -10,12 +10,11 @@ import random as rand
 def read_table():
 	print("Module Active")
 
-# This definition receives a command and rolls a d4, d6, d8, d10, d12, or d20
+# This definition receives a !dice command from bot.py and rolls a d4, d6, d8, d10, d12, or d20
 def roll_dice(cmd):
 	command = str(cmd)
 	indexer = len(command)
-	multiplier = int(command[indexer-1])
-	print(multiplier)
+	multiplier = int(command[indexer-1])  # The multiplier limit is 9. Rolls over 9 is invalid
 
 	if command.__contains__("d4"):
 		roll = rand.randint(1, 4)
@@ -25,9 +24,8 @@ def roll_dice(cmd):
 		roll = 0
 		if multiplier > 1:
 			while multiplier > 0:
-				print("roll: " + str(roll) + "@ multiplier" + str(multiplier))
 				roll += rand.randint(1, 6)
-				multiplier -= multiplier
+				multiplier = multiplier - 1
 		else:
 			roll = rand.randint(1, 6)
 
