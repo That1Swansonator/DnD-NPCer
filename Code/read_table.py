@@ -17,18 +17,44 @@ def roll_dice(cmd):
 	multiplier = int(command[indexer-1])  # The multiplier limit is 9. Rolls over 9 is invalid
 
 	if command.__contains__("d4"):
-		roll = rand.randint(1, 4)
+		roll = 0
+		while multiplier > 0:
+			roll += rand.randint(1, 4)
+			multiplier = multiplier - 1
 		return roll
 
 	elif command.__contains__("d6"):
 		roll = 0
-		if multiplier > 1:
-			while multiplier > 0:
+		while multiplier > 0:
 				roll += rand.randint(1, 6)
 				multiplier = multiplier - 1
-		else:
-			roll = rand.randint(1, 6)
+		return roll
 
+	elif command.__contains__("d8"):
+		roll = 0
+		while multiplier > 0:
+			roll += rand.randint(1, 8)
+			multiplier = multiplier - 1
+		return roll
+	elif command.__contains__("d12"):
+		roll = 0
+		while multiplier > 0:
+			roll += rand.randint(1, 12)
+			multiplier = multiplier - 1
+		return roll
+
+	elif command.__contains__("d20"):
+		roll = 0
+		while multiplier > 0:
+			roll += rand.randint(1, 20)
+			multiplier = multiplier - 1
+		return roll
+
+	elif command.__contains__("d100"):
+		roll = 0
+		while multiplier > 0:
+			roll += rand.randint(1, 100)
+			multiplier = multiplier - 1
 		return roll
 
 	else:
